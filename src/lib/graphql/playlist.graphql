@@ -1,0 +1,30 @@
+query GetPlaylist($playlist_query: PlaylistQueryInput!) {
+  playlistTracks(trackQuery: $playlist_query) {
+      name
+      album {
+          images {
+              url
+          }
+      }
+      artists {
+          name
+          id
+      }
+      previewUrl
+      liked
+    
+  }
+  playlist(trackQuery: $playlist_query) {
+    name
+    images {
+      url
+    }
+    owner{
+      displayName
+    }
+    tracks {
+        total
+    }
+  }
+}
+
