@@ -10,6 +10,6 @@ if (environment == 'dev') {
     nest_origin = 'http://localhost:5000'
 }
 else if (environment == 'prod') {
-    fast_origin = 'https://api.shrillecho.app'
+    fast_origin = 'http://fastapi_server:8001'
 }
 
