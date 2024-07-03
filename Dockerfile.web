@@ -2,19 +2,15 @@ FROM node:21-alpine3.18
 
 WORKDIR /app
 
-COPY ./web/package*.json ./
-COPY ./web/yarn.lock ./
+COPY ./package*.json ./
+COPY ./yarn.lock ./
 RUN yarn install
 
-COPY ./web/ ./
+COPY ./ ./
+
+# ENV CHOKIDAR_USEPOLLING=true
+# ENV WATCHPACK_POLLING=true
+CMD ["yarn","run", "dev"]
 
 # RUN yarn run build
-
-EXPOSE 3000
-
-ENV CHOKIDAR_USEPOLLING=true
-
-ENV WATCHPACK_POLLING=true
-
-CMD ["yarn","run", "dev"]
 # CMD ["yarn", "start"]

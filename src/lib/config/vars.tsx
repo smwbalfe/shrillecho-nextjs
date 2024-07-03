@@ -1,14 +1,15 @@
 const environment = process.env.NEXT_PUBLIC_ENV
-let fast_origin = ''
+export let fast_origin = ''
+export let nest_origin = ''
 
 console.log(`environment: ${environment}`)
 
 if (environment == 'dev') {
 
     fast_origin = 'http://localhost:8001'
+    nest_origin = 'http://localhost:5000'
 }
 else if (environment == 'prod') {
     fast_origin = 'https://api.shrillecho.app'
 }
 
-export default fast_origin

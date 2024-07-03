@@ -1,3 +1,3 @@
 'use client'
-import { App } from '~/lib/pages/playlistView'
+import { App } from "~/lib/pages/playlist-view"
 export default App;

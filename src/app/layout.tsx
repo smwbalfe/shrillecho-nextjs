@@ -1,7 +1,9 @@
 'use client'
 import Layout from "~/lib/layout";
 import { Providers } from "~/lib/config/providers";
-import { indexTheme } from "~/lib/theme";
+
+
+import 'lib/theme/globals.css'
 
 export default function RootLayout({
   children,

@@ -3,8 +3,8 @@
 import { Box } from '@chakra-ui/react';
 import type { ReactNode } from 'react';
 
-import Footer from './Footer'
-import Header from './Header'
+import Footer from './footer'
+import Header from './header'
 
 type LayoutProps = {
     children: ReactNode;
@@ -15,7 +15,7 @@ const Layout = ({ children }: LayoutProps) => {
         <Box margin="0 auto" maxWidth={1920} transition="0.5s ease-out">
             <Box margin="1">
                 <Header/>
-                    <Box as="main" marginY={10} marginBottom={'100px'}>
+                    <Box as="main" marginY={1} marginBottom={'100px'}>
                         {children}
                     </Box>
                 <Footer/>

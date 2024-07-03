@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import fast_origin from '../config/vars';
+import {fast_origin} from '../config/vars';
 import { useSearchParams } from 'next/navigation';
 
 export const useAuth = () => {
@@ -25,21 +25,6 @@ export const useAuth = () => {
         checkAuthCookie();
     }, []);
 
-
-    useEffect(() => {
-        const fetchUser = async () => {
-            try {
-                const response = await axios.get(`${fast_origin}/me`, { withCredentials: true });
-                setUser(response.data.display_name);
-            } catch (error) {
-                console.error('Error fetching user data:', error);
-            }
-        };
-
-        if (authed) {
-            fetchUser();
-        }
-    }, [authed]);
 
     return { user, authed, setAuthed };
 };

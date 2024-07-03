@@ -3,22 +3,21 @@ import { ChakraProvider,  CSSReset } from "@chakra-ui/react";
 import { CacheProvider } from "@chakra-ui/next-js";
 import {ReactNode} from 'react'
 import { ApolloProvider } from "@apollo/client";
-import client from "../config/apolloClient";
+import client from "../config/apollo-client";
 import { indexTheme } from "~/lib/theme";
+
+import 'lib/theme/globals.css'
 
 interface ProvidersProps {
     children: ReactNode;
-    theme?: any; 
 }
 
-export function Providers({ children, theme }: ProvidersProps) {
+export function Providers({ children }: ProvidersProps) {
     return (
         <ApolloProvider client={client}>
-            <CacheProvider>
-                <ChakraProvider theme={indexTheme}>
-                    {children}
-                </ChakraProvider>
-            </CacheProvider>
+            <ChakraProvider theme={indexTheme}>
+                {children}
+            </ChakraProvider>
         </ApolloProvider>
     );
 }

@@ -1,19 +1,7 @@
 query GetTrack($track_id: String!) {
   track(trackId: $track_id) {
-    id
-    name
-    artists {
-      id
-      name
-    }
-    album {
-      images {
-        url
-      }
-    }
-    artists {
-      name
-    }
+    name 
+    duration_ms
   }
 }
 

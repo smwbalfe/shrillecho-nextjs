@@ -2,10 +2,11 @@ const { default: next } = require('next')
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    basePath: "",
     images: {
         unoptimized: true,
         domains: ['image-cdn-ak.spotifycdn.com']
-    }
+    },
 }
 
 // module.exports = {
