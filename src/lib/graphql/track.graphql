@@ -1,0 +1,7 @@
+query GetTrack($track_id: String!) {
+  track(trackId: $track_id) {
+    name 
+    duration_ms
+  }
+}
+

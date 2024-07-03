@@ -1,0 +1,36 @@
+query GetPlaylist($playlistId: String!, $playlistTracksInput: PlaylistTracksInput!) {
+  playlistTracks(playlistTracksInput: $playlistTracksInput) {
+      name
+      album {
+          images {
+              url
+          }
+      }
+      artists {
+          name
+          id
+          genres
+          followers {
+            total
+          }
+      }
+      previewUrl
+      liked
+      popularity
+
+    
+  }
+  playlist(playlistId: $playlistId) {
+    name
+    images {
+      url
+    }
+    owner{
+      displayName
+    }
+    tracks {
+        total
+    }
+  }
+}
+

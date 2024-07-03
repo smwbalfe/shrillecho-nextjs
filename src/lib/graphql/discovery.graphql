@@ -1,0 +1,17 @@
+query GetRelated($artist_id: String!) {
+  discovery(artistId: $artist_id) {
+    name
+    album {
+        images {
+            url
+        }
+    }
+    artists {
+        name
+        id
+    }
+    preview_url
+    liked
+  }
+}
+

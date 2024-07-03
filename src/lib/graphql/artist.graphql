@@ -1,0 +1,9 @@
+# query GetArtist($artist_id: String!) {
+#   artist(artistId: $artist_id) {
+#     name
+#     images {
+#         url
+#     }
+#   }
+# }
+

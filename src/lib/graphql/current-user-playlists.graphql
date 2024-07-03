@@ -1,0 +1,11 @@
+query GetCurrentUserPlaylists {
+  currentUserPlaylists {
+    id
+    name
+    images {
+        url
+    }
+    href
+    public
+  }
+}
